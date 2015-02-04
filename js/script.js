@@ -231,7 +231,13 @@ else{
 			}
 		};
 
-
+		this.startOver = function(){
+			this.done = false;
+			this.openingDone = false;
+			this.decade = 0;
+			this.prayerCount = 0;
+			prayerTotal = 0;
+		};
 
 
 

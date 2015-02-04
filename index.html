@@ -20,7 +20,7 @@
 		<br />
 		<br />
 		
-		<button ng-click="rosary.reload()">Start Over</button>
+		<button ng-click="rosary.startOver()">Start Over</button>
 		<br />
 		<br />
 		
@@ -31,7 +31,7 @@
 		
 		<div ng-show="(rosary.openingDone == true)">
 			<p>{{rosary.mystery.name}}</p>
-			<p>{{rosary.prayerCount}}</p>
+			<p ng-show="rosary.prayerCount > 0 && rosary.prayerCount < 11">{{rosary.prayerCount}}</p>
 			<p>{{rosary.mystery.decade[rosary.decade]}}</p>
 		</div>
 	</body>
