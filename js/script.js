@@ -112,7 +112,6 @@ else{
 
 (function(){
 
-
 	var app = angular.module('rosary', []);
 
 	app.controller('RosaryController', function(){
@@ -147,12 +146,12 @@ else{
 				}
 
 			}
+
 			else if (prayerTotal > 5){
 				this.openingDone = true;
 				return true;
 			}
 
-			
 		};
 
 
@@ -183,8 +182,6 @@ else{
 			}
 
 			else if (this.openingDone === true){
-			
-
 
 			}	
 		};
@@ -238,10 +235,6 @@ else{
 			this.prayerCount = 0;
 			prayerTotal = 0;
 		};
-
-
-
-
 
 	});
 
