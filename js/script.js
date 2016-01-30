@@ -4,7 +4,7 @@
 var dailyMystery, day, prayerTotal = 0;
 
 // gets day and converts it to string
-day = (function(){
+day = (function() {
         var d = new Date();
         var n = d.getDay();
 
@@ -114,7 +114,7 @@ else{
 
     var app = angular.module('rosary', []);
 
-    app.controller('RosaryController', function(){
+    app.controller('RosaryController', function() {
         this.mystery = dailyMystery;
         this.openingPrayers = opener;
         this.done = false;
@@ -129,7 +129,7 @@ else{
         this.prayerCount = 0;
 
 
-        this.add = function(){
+        this.add = function() {
             prayerTotal++;
             if (this.openingDone === true){
                 this.prayerCount++;
@@ -147,7 +147,7 @@ else{
 
             }
 
-            else if (prayerTotal > 5){
+            else if (prayerTotal > 5) {
                 this.openingDone = true;
                 return true;
             }
@@ -155,7 +155,7 @@ else{
         };
 
 
-        this.subtract = function(amount){
+        this.subtract = function(amount) {
             if (prayerTotal > 0){
                 prayerTotal--;  
                 // console.log(prayerTotal);
@@ -168,7 +168,7 @@ else{
             }
         };
 
-        this.showPrayerName = function(){
+        this.showPrayerName = function() {
             if (this.openingDone !== true){
                 if (prayerTotal > 1 && prayerTotal < 5){
                     return this.openingPrayers[2].name;
@@ -186,7 +186,7 @@ else{
             }   
         };
 
-        this.showPrayer = function(){
+        this.showPrayer = function() {
             // opening prayers
             if (this.openingDone !== true){
                 if (prayerTotal > 1 && prayerTotal < 5){
@@ -228,7 +228,7 @@ else{
             }
         };
 
-        this.startOver = function(){
+        this.startOver = function() {
             this.done = false;
             this.openingDone = false;
             this.decade = 0;
